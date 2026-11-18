@@ -1,0 +1,22 @@
+body {
+    font-family: 'Cairo', Tahoma, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    margin: 0;
+    padding: 20px;
+    direction: rtl;
+}
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+h1 { color: #1e3a8a; margin-top: 0; }
+h2 { color: #3b82f6; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; }
+.bio { font-size: 1.1em; line-height: 1.8; color: #475569; }
+ul { list-style-type: square; padding-right: 20px; }
+li { margin-bottom: 8px; font-weight: 600; }
+a { color: #2563eb; text-decoration: none; }

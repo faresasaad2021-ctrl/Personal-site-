@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>فارس أسعد</h1>
+            <p class="bio">طغى الشغف بتقنية المعلومات والأمن السيبراني على مسيرتي. أسعى دائماً لبناء حلول رقمية آمنة ومبتكرة، وأمتلك فضولاً مستمراً لتطوير مهاراتي البرمجية وتصميم واجهات المستخدم.</p>
+        </header>
+        <section class="skills">
+            <h2>المهارات الرئيسية</h2>
+            <ul>
+                <li>أمن المعلومات والأمن السيبراني</li>
+                <li>البرمجة بلغة Java & Python</li>
+                <li>تصميم واجهات المستخدم UI/UX</li>SS
+                <li>إدارة المشاريع الرقمية</li>
+                <li>تحليل الأدلة الجنائية الرقمية</li>
+            </ul>
+        </section>
+        <section class="contact">
+            <h2>تواصل معي</h2>
+            <p>البريد الإلكتروني: <a href="mailto:fares@example.com">fares@example.com</a></p>
+        </section>
+    </div>
+</body>
+</html>
