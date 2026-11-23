@@ -1,85 +1,220 @@
+:root {
+    --bg-main: #060913;
+    --bg-card: rgba(15, 23, 42, 0.75);
+    --navy-accent: #1e3a8a;
+    --blue-highlight: #3b82f6;
+    --cyan-glow: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-subtle: rgba(56, 189, 248, 0.15);
+}
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    background-color: #0d1117;
-    color: #e6edf3;
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.7;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    padding: 2rem 1rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* إضاءة خلفية كحلية فخمة */
+.background-glow {
+    position: fixed;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(30, 58, 138, 0.35) 0%, rgba(6, 9, 19, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
 }
 
 .container {
-    background-color: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 12px;
-    padding: 40px;
-    max-width: 700px;
     width: 100%;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    max-width: 780px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
 }
 
-.profile-header h1 {
-    font-size: 2rem;
+/* البطاقات الزجاجية */
+.hero-card, .skills-section, .contact-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-card:hover, .contact-card:hover {
+    border-color: rgba(56, 189, 248, 0.35);
+}
+
+/* قسم الترحيب */
+.hero-card {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--blue-highlight), var(--cyan-glow), transparent);
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(30, 58, 138, 0.5);
+    color: var(--cyan-glow);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 0.35rem 1.1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
     font-weight: 700;
-    margin-bottom: 15px;
-    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ffffff 30%, #93c5fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .bio {
+    color: var(--text-secondary);
     font-size: 1.05rem;
-    line-height: 1.8;
-    color: #8b949e;
-    font-weight: 300;
+    max-width: 620px;
+    margin: 0 auto;
 }
 
-.divider {
-    border: none;
-    height: 1px;
-    background-color: #30363d;
-    margin: 30px 0;
-}
-
-h2 {
-    font-size: 1.3rem;
-    color: #ffffff;
-    margin-bottom: 20px;
+/* قسم المهارات */
+.section-title {
+    font-size: 1.35rem;
     font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
 }
 
-.skills-list {
-    list-style: none;
+.section-title::before {
+    content: "";
+    width: 4px;
+    height: 22px;
+    background: var(--blue-highlight);
+    border-radius: 4px;
 }
 
-.skills-list li {
-    position: relative;
-    padding-right: 20px;
-    margin-bottom: 12px;
-    color: #c9d1d9;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.skill-item {
+    background: rgba(10, 15, 30, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    transition: all 0.25s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-3px);
+    background: rgba(30, 58, 138, 0.25);
+    border-color: rgba(59, 130, 246, 0.4);
+}
+
+.skill-name {
+    font-weight: 700;
     font-size: 1rem;
+    color: #e2e8f0;
 }
 
-.skills-list li::before {
-    content: "▪";
-    position: absolute;
-    right: 0;
-    color: #58a6ff;
+.skill-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
 }
 
-.email-link {
-    color: #58a6ff;
+/* قسم التواصل */
+.contact-card {
+    text-align: center;
+}
+
+.contact-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.email-btn {
+    display: inline-block;
     text-decoration: none;
-    font-weight: 400;
-    transition: color 0.2s ease;
+    color: #ffffff;
+    background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+    border: 1px solid rgba(96, 165, 250, 0.4);
+    padding: 0.85rem 2rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    direction: ltr;
+    box-shadow: 0 8px 20px rgba(29, 78, 216, 0.35);
+    transition: all 0.3s ease;
 }
 
-.email-link:hover {
-    color: #79c0ff;
-    text-decoration: underline;
+.email-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.5);
 }
+
+/* التجاوب مع الجوال */
+@media (max-width: 600px) {
+    .hero-card, .skills-section, .contact-card {
+        padding: 1.75rem 1.25rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .email-btn {
+        width: 100%;
+        padding: 0.85rem 1rem;
+        font-size: 0.92rem;
+    }
+} 
+
+
