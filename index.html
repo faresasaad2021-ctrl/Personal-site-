@@ -3,29 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الملف الشخصي</title>
+    <title>فارس أسعد | السيرة الذاتية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>فارس أسعد</h1>
-            <p class="bio">طغى الشغف بتقنية المعلومات والأمن السيبراني على مسيرتي. أسعى دائماً لبناء حلول رقمية آمنة ومبتكرة، وأمتلك فضولاً مستمراً لتطوير مهاراتي البرمجية وتصميم واجهات المستخدم.</p>
+
+    <div class="background-glow"></div>
+
+    <main class="container">
+        <!-- قسم الترحيب والنبذة -->
+        <header class="hero-card">
+            <div class="badge">متخصص في الذكاء الاصطناعي</div>
+            <h1>فارس أسعد علي حسن</h1>
+            <p class="bio">
+                طالب جامعي في كلية الحاسبات وتقنية المعلومات متخصص في الذكاء الاصطناعي. 
+                أجمع بين تطوير الخوارزميات الذكية والبرمجة بلغة Python و Java، مع شغف عميق بأمن المعلومات والتشفير وتصميم الحلول الرقمية المبتكرة.
+            </p>
         </header>
-        <section class="skills">
-            <h2>المهارات الرئيسية</h2>
-            <ul>
-                <li>أمن المعلومات والأمن السيبراني</li>
-                <li>البرمجة بلغة Java & Python</li>
-                <li>تصميم واجهات المستخدم UI/UX</li>SS
-                <li>إدارة المشاريع الرقمية</li>
-                <li>تحليل الأدلة الجنائية الرقمية</li>
-            </ul>
+
+        <!-- قسم المهارات -->
+        <section class="skills-section">
+            <h2 class="section-title">المهارات التقنية</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <span class="skill-name">الذكاء الاصطناعي وتعلم الآلة</span>
+                    <span class="skill-desc">الشبكات العصبية وخوارزميات التجميع (K-means)</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">البرمجة وتطوير البرمجيات</span>
+                    <span class="skill-desc">إتقان لغات Python و Java وبناء الأنظمة</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">أمن المعلومات والتشفير</span>
+                    <span class="skill-desc">التشفير الكلاسيكي وغير المتماثل (RSA) والأدلة الجنائية</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">تصميم واجهات وتجربة المستخدم</span>
+                    <span class="skill-desc">تصميم الواجهات الآمنة والحديثة (UI/UX)</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">إدارة المنتجات الرقمية</span>
+                    <span class="skill-desc">تحليل المتطلبات وتخطيط المشاريع التقنية</span>
+                </div>
+            </div>
         </section>
-        <section class="contact">
+
+        <!-- قسم التواصل -->
+        <footer class="contact-card">
             <h2>تواصل معي</h2>
-            <p>البريد الإلكتروني: <a href="mailto:faresasaad2021gmail.com">fares@example.com</a></p>
-        </section>
-    </div>
+            <p>يسعدني تواصلك لمناقشة المشاريع التقنية أو الفرص التعاونية</p>
+            <a href="mailto:faresasaad2021@gmail.com" class="email-btn">
+                faresasaad2021@gmail.com
+            </a>
+        </footer>
+    </main>
+
 </body>
 </html>
